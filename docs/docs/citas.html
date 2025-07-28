@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar Cita</title>
+  <link rel="stylesheet" href="estilo-citas.css">
+</head>
+<body>
+  <h1>Solicitar una Cita</h1>
+  <form id="form-cita">
+    <form action="guardar-cita.php" method="POST">
+  <!-- tus campos -->
+</form>
+
+    <label for="barbero">Barbero preferido:</label>
+    <select id="barbero" required>
+      <option value="">Seleccione</option>
+      <option>Julián</option>
+      <option>Marco</option>
+      <option>Luis</option>
+    </select>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" min="09:00" max="20:00" step="1800" required>
+
+    <button type="submit">Solicitar Cita</button>
+  </form>
+
+  
+  <script>
+    document.getElementById('form-cita').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const barbero = document.getElementById('barbero').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+
+      if (!barbero || !fecha || !hora) {
+        alert('Completa todos los campos para enviar tu cita.');
+        return;
+      }
+
+      const horaSeleccionada = new Date(`1970-01-01T${hora}:00`);
+      const horaMin = new Date(`1970-01-01T09:00:00`);
+      const horaMax = new Date(`1970-01-01T20:00:00`);
+
+      if (horaSeleccionada < horaMin || horaSeleccionada > horaMax) {
+        alert('La hora debe ser entre 9:00 AM y 8:00 PM.');
+        return;
+      }
+
+      alert('¡Tu cita fue enviada correctamente! Pronto te confirmaremos.');
+    });
+  </script>
+</body>
+</html>

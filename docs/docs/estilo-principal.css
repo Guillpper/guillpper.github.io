@@ -1,0 +1,173 @@
+/* ===== VARIABLES BASE ===== */
+:root {
+  --accent: #d4af37;
+  --accent-hover: #c19e36;
+  --background: #1a1a1a;
+  --text: #fff;
+  --text-secondary: #aaa;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== BASE GENERAL ===== */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+  background-color: #000;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent-hover);
+}
+
+/* ===== SECCIÓN HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== SECCIÓN DE CARRUSELES ===== */
+.carousel-section {
+  padding: 40px;
+}
+
+.carousel-section h2 {
+  font-size: 28px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* ===== CARRUSEL GENERAL ===== */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img,
+.style-card {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-track img:hover,
+.style-card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FLECHAS DE NAVEGACIÓN ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.arrow.left { left: 15px; }
+.arrow.right { right: 15px; }
+
+.arrow:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow:active {
+  background-color: var(--accent-hover);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVIDAD ===== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 18px; }
+  .carousel-track img { width: 160px; }
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}

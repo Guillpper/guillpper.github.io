@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #fffefa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4a017;
+}

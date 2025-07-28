@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BarberShop - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="prueba estilo.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="cortes/polo-barbero.png" alt="Barber pole logo" style="height: 40px; margin-right: 10px;">
+      <span>BarberShop</span>
+    </div>
+    <div class="auth-buttons">
+      <button class="btn btn-login" onclick="window.location.href='inicio sesion.html'">Iniciar Sesión</button>
+      <button class="btn btn-signup" onclick="window.location.href='registro.html'">Registrarse</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transforma tu estilo con nuestros expertos barberos</h1>
+      <p>Descubre el arte del corte tradicional y moderno para todos los estilos</p>
+      <button class="btn-explore" onclick="window.location.href='registro.html'">Empezar</button>
+    </div>
+  </section>
+
+  <section class="styles-section" id="styles">
+    <h2 class="section-title">Nuestros Estilos Destacados</h2>
+
+    <div class="carousel">
+      <div class="carousel-container" id="carousel">
+        <!-- Caballeros -->
+        <div class="carousel-slide">
+          <img src="cortes/fade-moderno.jpg" alt="Fade Moderno">
+          <div class="slide-content">
+            <h3>Fade Moderno</h3>
+            <p>Transiciones precisas que crean un look sofisticado.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="cortes/undercut.jpg" alt="Undercut">
+          <div class="slide-content">
+            <h3>Undercut</h3>
+            <p>Contraste audaz entre rapado lateral y volumen superior.</p>
+          </div>
+        </div>
+
+        <!-- Damas -->
+        <div class="carousel-slide">
+          <img src="cortes/bob moderno.jpg" alt="Bob Moderno">
+          <div class="slide-content">
+            <h3>Bob Moderno</h3>
+            <p>Elegancia con líneas suaves para un look profesional.</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="cortes/capas-largas.webp" alt="Capas Largas">
+          <div class="slide-content">
+            <h3>Capas Largas</h3>
+            <p>Movimiento natural y volumen con estilo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="active" onclick="goToSlide(0)"></button>
+        <button onclick="goToSlide(1)"></button>
+        <button onclick="goToSlide(2)"></button>
+        <button onclick="goToSlide(3)"></button>
+      </div>
+    </div>
+  </section>
+
+    <div class="features">
+      <div class="feature-card">
+        <img src="cortes/Foto_Barbero.avif" alt="Barberos Expertos">
+        <div class="feature-content">
+          <h3>Barberos Expertos</h3>
+          <p>Nuestros barberos están altamente capacitados y siguen las últimas tendencias en cortes y estilos.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="cortes/Salon.jpg" alt="Ambiente Exclusivo">
+        <div class="feature-content">
+          <h3>Ambiente Exclusivo</h3>
+          <p>Disfruta de un ambiente relajado y exclusivo diseñado para tu comodidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<form action="php/login.php" method="POST">
+  <input type="email" name="correo" placeholder="Correo" required />
+  <input type="password" name="clave" placeholder="Contraseña" required />
+  <button type="submit">Ingresar</button>
+</form>
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>BarberShop</h3>
+        <p>Transformando estilos desde 2024. Ofrecemos los mejores servicios de barbería con atención personalizada.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 BarberShop. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="prueba javascript.js"></script>
+</body>
+</html>

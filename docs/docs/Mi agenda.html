@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Agenda</title>
+  <link rel="stylesheet" href="formulario-citas.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+  <h1>Mi Agenda</h1>
+  <p>Selecciona tu barbero y una fecha disponible:</p>
+
+  <form>
+    <label for="barbero">Barbero:</label>
+    <select id="barbero">
+      <option value="">Seleccione</option>
+      <option>Julián</option>
+      <option>Marco</option>
+      <option>Luis</option>
+    </select>
+
+    <label for="fecha">Fecha:</label>
+    <input type="text" id="selector-fecha" placeholder="Selecciona una fecha" />
+    
+    <button type="submit">Reservar</button>
+  </form>
+
+  <script>
+    flatpickr("#selector-fecha", {
+      minDate: "today",
+      dateFormat: "Y-m-d",
+      disableMobile: true,
+    });
+  </script>
+</body>
+</html>
